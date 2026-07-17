@@ -36,6 +36,9 @@ MAX_NEW_TOKENS = 2000
 TEMPERATURE = 0.3
 TYPE_DELAY = 0.015
 
+# ============================================================
+# VALID QUESTIONS - ONLY THESE WILL BE ANSWERED
+# ============================================================
 VALID_QUESTIONS = [
     "hi", "hello", "hey", "good morning", "good afternoon", "good evening",
     "how are you", "what's up",
@@ -48,6 +51,118 @@ VALID_QUESTIONS = [
     "thank you", "thanks", "thank you very much",
     "bye", "goodbye", "see you later", "take care"
 ]
+
+# ============================================================
+# EXACT ANSWERS - DILI MAG-USAB-USAB
+# ============================================================
+EXACT_ANSWERS = {
+    "hi": "Hello! How are you? I'm Master AI, your TMC assistant.",
+    "hello": "Hi there! How are you? This is Master AI.",
+    "hey": "Hey! How can I help you today?",
+    "good morning": "Good morning! How are you today?",
+    "vision": 'The vision of TMC is: "A Model Institution with Fully Developed Academic Technical-Vocational Education and Skill Manpower with Positive Work Attitudes Anchored in the Core Values of Leadership and Professionalism Essential in the Creation of Self Reliant Citizen."',
+    "vision sa tmc": 'The vision of TMC is: "A Model Institution with Fully Developed Academic Technical-Vocational Education and Skill Manpower with Positive Work Attitudes Anchored in the Core Values of Leadership and Professionalism Essential in the Creation of Self Reliant Citizen."',
+    "vision of tmc": 'The vision of TMC is: "A Model Institution with Fully Developed Academic Technical-Vocational Education and Skill Manpower with Positive Work Attitudes Anchored in the Core Values of Leadership and Professionalism Essential in the Creation of Self Reliant Citizen."',
+    "what is the vision": 'The vision of TMC is: "A Model Institution with Fully Developed Academic Technical-Vocational Education and Skill Manpower with Positive Work Attitudes Anchored in the Core Values of Leadership and Professionalism Essential in the Creation of Self Reliant Citizen."',
+    "mission": 'The mission of TMC is: "To Build Well Trained, Competent, and Employable Professionals Who Will Meet the Demands of Local and International Workplaces."',
+    "mission sa tmc": 'The mission of TMC is: "To Build Well Trained, Competent, and Employable Professionals Who Will Meet the Demands of Local and International Workplaces."',
+    "mission of tmc": 'The mission of TMC is: "To Build Well Trained, Competent, and Employable Professionals Who Will Meet the Demands of Local and International Workplaces."',
+    "what is the mission": 'The mission of TMC is: "To Build Well Trained, Competent, and Employable Professionals Who Will Meet the Demands of Local and International Workplaces."',
+    "goal": 'The goal of TMC is: "TMC Aims at Evolving a Whole Individual as a Child of God and a Member of Democratic Society Who is Professionally Competent that Can Provide Leadership and Advance Knowledge, Well Trained in a Certain Vocation Not Only to Help Himself but to Help Others and Practical Yet Responsible and Obedient to the Laws of God and to the Laws of the Government."',
+    "goal sa tmc": 'The goal of TMC is: "TMC Aims at Evolving a Whole Individual as a Child of God and a Member of Democratic Society Who is Professionally Competent that Can Provide Leadership and Advance Knowledge, Well Trained in a Certain Vocation Not Only to Help Himself but to Help Others and Practical Yet Responsible and Obedient to the Laws of God and to the Laws of the Government."',
+    "goal of tmc": 'The goal of TMC is: "TMC Aims at Evolving a Whole Individual as a Child of God and a Member of Democratic Society Who is Professionally Competent that Can Provide Leadership and Advance Knowledge, Well Trained in a Certain Vocation Not Only to Help Himself but to Help Others and Practical Yet Responsible and Obedient to the Laws of God and to the Laws of the Government."',
+    "what is the goal": 'The goal of TMC is: "TMC Aims at Evolving a Whole Individual as a Child of God and a Member of Democratic Society Who is Professionally Competent that Can Provide Leadership and Advance Knowledge, Well Trained in a Certain Vocation Not Only to Help Himself but to Help Others and Practical Yet Responsible and Obedient to the Laws of God and to the Laws of the Government."',
+    "who created you": "I was created by Rex Joseph R Felecio.",
+    "who made you": "I was created by Rex Joseph R Felecio.",
+    "creator": "I was created by Rex Joseph R Felecio.",
+    "first name": "Rex.",
+    "middle name": "Joseph.",
+    "last name": "Felecio.",
+    "what is tmc": "TMC stands for Trinidad Municipal College.",
+    "tmc meaning": "TMC stands for Trinidad Municipal College.",
+    "thank you": "You're welcome! Always happy to help. God bless! 😊",
+    "thanks": "You're welcome! Always happy to help. God bless! 😊",
+    "bye": "Bye! God bless! Come back if you have any questions. 😊",
+    "goodbye": "Goodbye! God bless! Come back if you have any questions. 😊",
+}
+
+def is_valid_question(prompt: str) -> bool:
+    """Check if the question is valid"""
+    prompt_lower = prompt.lower().strip()
+    
+    # Check for exact match
+    if prompt_lower in VALID_QUESTIONS:
+        return True
+    
+    # Check for partial match
+    for valid in VALID_QUESTIONS:
+        if valid in prompt_lower or prompt_lower in valid:
+            return True
+    
+    # Check for keywords
+    if "vision" in prompt_lower:
+        return True
+    if "mission" in prompt_lower:
+        return True
+    if "goal" in prompt_lower:
+        return True
+    if "creator" in prompt_lower or "created" in prompt_lower or "made" in prompt_lower:
+        return True
+    if "first name" in prompt_lower or "middle name" in prompt_lower or "last name" in prompt_lower:
+        return True
+    if "name" in prompt_lower:
+        return True
+    if "tmc" in prompt_lower:
+        return True
+    if "thank" in prompt_lower:
+        return True
+    if "bye" in prompt_lower or "goodbye" in prompt_lower:
+        return True
+    if "hi" in prompt_lower or "hello" in prompt_lower or "hey" in prompt_lower:
+        return True
+    if "how are you" in prompt_lower or "what's up" in prompt_lower:
+        return True
+    
+    return False
+
+def get_exact_answer(prompt: str) -> str:
+    """Return the exact answer based on the prompt"""
+    prompt_lower = prompt.lower().strip()
+    
+    # Check for exact match
+    if prompt_lower in EXACT_ANSWERS:
+        return EXACT_ANSWERS[prompt_lower]
+    
+    # Check for partial match
+    for key in EXACT_ANSWERS:
+        if key in prompt_lower or prompt_lower in key:
+            return EXACT_ANSWERS[key]
+    
+    # Check for keywords
+    if "vision" in prompt_lower:
+        return EXACT_ANSWERS["vision"]
+    if "mission" in prompt_lower:
+        return EXACT_ANSWERS["mission"]
+    if "goal" in prompt_lower:
+        return EXACT_ANSWERS["goal"]
+    if "creator" in prompt_lower or "created" in prompt_lower or "made" in prompt_lower:
+        return EXACT_ANSWERS["who created you"]
+    if "first name" in prompt_lower:
+        return EXACT_ANSWERS["first name"]
+    if "middle name" in prompt_lower:
+        return EXACT_ANSWERS["middle name"]
+    if "last name" in prompt_lower:
+        return EXACT_ANSWERS["last name"]
+    if "tmc" in prompt_lower:
+        return EXACT_ANSWERS["what is tmc"]
+    if "thank" in prompt_lower:
+        return EXACT_ANSWERS["thank you"]
+    if "bye" in prompt_lower or "goodbye" in prompt_lower:
+        return EXACT_ANSWERS["bye"]
+    if "hi" in prompt_lower or "hello" in prompt_lower or "hey" in prompt_lower:
+        return EXACT_ANSWERS["hi"]
+    
+    return None
 
 def clean_response(text: str, prompt: str = "") -> str:
     text = text.replace("\r", "").strip()
@@ -69,95 +184,14 @@ def clean_response(text: str, prompt: str = "") -> str:
     if "---" in text:
         text = text.split("---")[0].strip()
     
-    prompt_lower = prompt.lower().strip()
-    
     # Check if question is valid
-    is_valid = False
-    for valid in VALID_QUESTIONS:
-        if valid in prompt_lower or prompt_lower in valid:
-            is_valid = True
-            break
-    
-    if not is_valid and len(prompt_lower) > 2:
-        if "vision" in prompt_lower or "mission" in prompt_lower or "goal" in prompt_lower:
-            is_valid = True
-        elif "tmc" in prompt_lower:
-            is_valid = True
-        elif "creator" in prompt_lower or "created" in prompt_lower or "made" in prompt_lower:
-            is_valid = True
-        elif "name" in prompt_lower:
-            is_valid = True
-        elif "hello" in prompt_lower or "hi" in prompt_lower or "hey" in prompt_lower:
-            is_valid = True
-        elif "thank" in prompt_lower or "bye" in prompt_lower or "goodbye" in prompt_lower:
-            is_valid = True
-    
-    if not is_valid:
+    if not is_valid_question(prompt):
         return "Sorry, I don't have an answer for that."
     
-    # COMPLETE ANSWERS
-    vision_complete = 'The vision of TMC is: "A Model Institution with Fully Developed Academic Technical-Vocational Education and Skill Manpower with Positive Work Attitudes Anchored in the Core Values of Leadership and Professionalism Essential in the Creation of Self Reliant Citizen."'
-    mission_complete = 'The mission of TMC is: "To Build Well Trained, Competent, and Employable Professionals Who Will Meet the Demands of Local and International Workplaces."'
-    goal_complete = 'The goal of TMC is: "TMC Aims at Evolving a Whole Individual as a Child of God and a Member of Democratic Society Who is Professionally Competent that Can Provide Leadership and Advance Knowledge, Well Trained in a Certain Vocation Not Only to Help Himself but to Help Others and Practical Yet Responsible and Obedient to the Laws of God and to the Laws of the Government."'
-    
-    # GREETINGS
-    if prompt_lower in ["hi", "hello", "hey", "good morning", "good afternoon", "good evening", "how are you", "what's up"]:
-        if "vision" in text.lower() or "mission" in text.lower() or "goal" in text.lower() or "TMC" in text:
-            if prompt_lower == "hi" or prompt_lower == "hello":
-                text = "Hello! How are you? I'm TmcAi, your TMC assistant."
-            elif prompt_lower == "hey":
-                text = "Hey! How can I help you today?"
-            elif prompt_lower == "good morning":
-                text = "Good morning! How are you today?"
-            elif prompt_lower == "good afternoon":
-                text = "Good afternoon! How can I help you?"
-            elif prompt_lower == "good evening":
-                text = "Good evening! How can I help you?"
-            elif prompt_lower == "how are you":
-                text = "I'm doing great! How about you?"
-            elif prompt_lower == "what's up":
-                text = "Not much! How can I help you today?"
-    
-    # VISION - Force complete
-    if "vision" in prompt_lower:
-        if "Self Reliant Citizen" not in text:
-            text = vision_complete
-        elif len(text) < len(vision_complete) - 10:
-            text = vision_complete
-    
-    # MISSION - Force complete
-    if "mission" in prompt_lower:
-        if "International Workplaces" not in text:
-            text = mission_complete
-        elif len(text) < len(mission_complete) - 10:
-            text = mission_complete
-    
-    # GOAL - Force complete
-    if "goal" in prompt_lower:
-        if "Laws of the Government" not in text:
-            text = goal_complete
-        elif len(text) < len(goal_complete) - 10:
-            text = goal_complete
-    
-    # CREATOR
-    if "creator" in prompt_lower or "created" in prompt_lower or "made" in prompt_lower:
-        if "TMC" in text and "Roxanne" not in text:
-            text = "I was created by Roxanne Boiser Duman-ag."
-        elif "vision" in text.lower() or "mission" in text.lower() or "goal" in text.lower():
-            text = "I was created by Roxanne Boiser Duman-ag."
-    
-    # FIRST, MIDDLE, LAST NAME
-    if "first name" in prompt_lower and "Roxanne" not in text:
-        text = "Roxanne."
-    if "middle name" in prompt_lower and "Boiser" not in text:
-        text = "Boiser."
-    if "last name" in prompt_lower and "Duman-ag" not in text:
-        text = "Duman-ag."
-    
-    # TMC
-    if "tmc" in prompt_lower and "Trinidad" not in text and "vision" not in prompt_lower and "mission" not in prompt_lower and "goal" not in prompt_lower:
-        if "vision" not in prompt_lower and "mission" not in prompt_lower and "goal" not in prompt_lower:
-            text = "TMC stands for Trinidad Municipal College."
+    # Check if we have an exact answer
+    exact_answer = get_exact_answer(prompt)
+    if exact_answer:
+        return exact_answer
     
     if len(text) < 3:
         return "Sorry, I don't have an answer for that."
@@ -171,6 +205,15 @@ def type_out(text: str, delay: float = TYPE_DELAY):
     print()
 
 def generate_response(prompt: str) -> str:
+    # First check if question is valid
+    if not is_valid_question(prompt):
+        return "Sorry, I don't have an answer for that."
+    
+    # Check if we have an exact answer
+    exact_answer = get_exact_answer(prompt)
+    if exact_answer:
+        return exact_answer
+    
     full_prompt = f"User: {prompt}\nAssistant: "
     
     encoded = encode(full_prompt)
@@ -198,9 +241,9 @@ def generate_response(prompt: str) -> str:
     return reply
 
 print("\n" + "="*50)
-print("  TMC AI ASSISTANT")
+print("  MASTER AI ASSISTANT")
 print("="*50)
-print("Hello! I'm TmcAi, your TMC assistant.")
+print("Hello! I'm Master AI, your TMC assistant.")
 print("\nCommands:")
 print("  /exit   - quit")
 print("  /clear  - clear memory")
