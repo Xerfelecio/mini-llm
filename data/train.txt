@@ -1,83 +1,160 @@
 User: hi
-Assistant: Hello! How are you? I'm Master AI, your TMC assistant. [END]
----
+Assistant: Hello! How are you? I'm Master AI, your TMC assistant.
+
 User: hello
-Assistant: Hi there! How are you? This is Master AI. [END]
----
+Assistant: Hi there! How are you? This is Master AI.
+
 User: hey
-Assistant: Hey! How can I help you today? [END]
----
+Assistant: Hey! How can I help you today?
+
 User: good morning
-Assistant: Good morning! How are you today? [END]
----
+Assistant: Good morning! How are you today?
+
+User: musta
+Assistant: Maayo! Musta pud ka? I'm Master AI, your TMC assistant.
+
+User: kumusta
+Assistant: Maayo! Kumusta ka? I'm Master AI, your TMC assistant.
+
 User: vision
-Assistant: The vision of TMC is: "A Model Institution with Fully Developed Academic Technical-Vocational Education and Skill Manpower with Positive Work Attitudes Anchored in the Core Values of Leadership and Professionalism Essential in the Creation of Self Reliant Citizen." [END]
----
+Assistant: The vision of TMC is: "A Model Institution with Fully Developed Academic Technical-Vocational Education and Skill Manpower with Positive Work Attitudes Anchored in the Core Values of Leadership and Professionalism Essential in the Creation of Self Reliant Citizen."
+
 User: vision sa tmc
-Assistant: The vision of TMC is: "A Model Institution with Fully Developed Academic Technical-Vocational Education and Skill Manpower with Positive Work Attitudes Anchored in the Core Values of Leadership and Professionalism Essential in the Creation of Self Reliant Citizen." [END]
----
-User: vision of TMC
-Assistant: The vision of TMC is: "A Model Institution with Fully Developed Academic Technical-Vocational Education and Skill Manpower with Positive Work Attitudes Anchored in the Core Values of Leadership and Professionalism Essential in the Creation of Self Reliant Citizen." [END]
----
-User: what is the vision
-Assistant: The vision of TMC is: "A Model Institution with Fully Developed Academic Technical-Vocational Education and Skill Manpower with Positive Work Attitudes Anchored in the Core Values of Leadership and Professionalism Essential in the Creation of Self Reliant Citizen." [END]
----
+Assistant: The vision of TMC is: "A Model Institution with Fully Developed Academic Technical-Vocational Education and Skill Manpower with Positive Work Attitudes Anchored in the Core Values of Leadership and Professionalism Essential in the Creation of Self Reliant Citizen."
+
+User: unsay vision
+Assistant: The vision of TMC is: "A Model Institution with Fully Developed Academic Technical-Vocational Education and Skill Manpower with Positive Work Attitudes Anchored in the Core Values of Leadership and Professionalism Essential in the Creation of Self Reliant Citizen."
+
 User: mission
-Assistant: The mission of TMC is: "To Build Well Trained, Competent, and Employable Professionals Who Will Meet the Demands of Local and International Workplaces." [END]
----
+Assistant: The mission of TMC is: "To Build Well Trained, Competent, and Employable Professionals Who Will Meet the Demands of Local and International Workplaces."
+
 User: mission sa tmc
-Assistant: The mission of TMC is: "To Build Well Trained, Competent, and Employable Professionals Who Will Meet the Demands of Local and International Workplaces." [END]
----
-User: mission of TMC
-Assistant: The mission of TMC is: "To Build Well Trained, Competent, and Employable Professionals Who Will Meet the Demands of Local and International Workplaces." [END]
----
-User: what is the mission
-Assistant: The mission of TMC is: "To Build Well Trained, Competent, and Employable Professionals Who Will Meet the Demands of Local and International Workplaces." [END]
----
+Assistant: The mission of TMC is: "To Build Well Trained, Competent, and Employable Professionals Who Will Meet the Demands of Local and International Workplaces."
+
+User: unsay mission
+Assistant: The mission of TMC is: "To Build Well Trained, Competent, and Employable Professionals Who Will Meet the Demands of Local and International Workplaces."
+
 User: goal
-Assistant: The goal of TMC is: "TMC Aims at Evolving a Whole Individual as a Child of God and a Member of Democratic Society Who is Professionally Competent that Can Provide Leadership and Advance Knowledge, Well Trained in a Certain Vocation Not Only to Help Himself but to Help Others and Practical Yet Responsible and Obedient to the Laws of God and to the Laws of the Government." [END]
----
+Assistant: The goal of TMC is: "TMC Aims at Evolving a Whole Individual as a Child of God and a Member of Democratic Society Who is Professionally Competent that Can Provide Leadership and Advance Knowledge, Well Trained in a Certain Vocation Not Only to Help Himself but to Help Others and Practical Yet Responsible and Obedient to the Laws of God and to the Laws of the Government."
+
 User: goal sa tmc
-Assistant: The goal of TMC is: "TMC Aims at Evolving a Whole Individual as a Child of God and a Member of Democratic Society Who is Professionally Competent that Can Provide Leadership and Advance Knowledge, Well Trained in a Certain Vocation Not Only to Help Himself but to Help Others and Practical Yet Responsible and Obedient to the Laws of God and to the Laws of the Government." [END]
----
-User: goal of TMC
-Assistant: The goal of TMC is: "TMC Aims at Evolving a Whole Individual as a Child of God and a Member of Democratic Society Who is Professionally Competent that Can Provide Leadership and Advance Knowledge, Well Trained in a Certain Vocation Not Only to Help Himself but to Help Others and Practical Yet Responsible and Obedient to the Laws of God and to the Laws of the Government." [END]
----
-User: what is the goal
-Assistant: The goal of TMC is: "TMC Aims at Evolving a Whole Individual as a Child of God and a Member of Democratic Society Who is Professionally Competent that Can Provide Leadership and Advance Knowledge, Well Trained in a Certain Vocation Not Only to Help Himself but to Help Others and Practical Yet Responsible and Obedient to the Laws of God and to the Laws of the Government." [END]
----
+Assistant: The goal of TMC is: "TMC Aims at Evolving a Whole Individual as a Child of God and a Member of Democratic Society Who is Professionally Competent that Can Provide Leadership and Advance Knowledge, Well Trained in a Certain Vocation Not Only to Help Himself but to Help Others and Practical Yet Responsible and Obedient to the Laws of God and to the Laws of the Government."
+
+User: unsay goal
+Assistant: The goal of TMC is: "TMC Aims at Evolving a Whole Individual as a Child of God and a Member of Democratic Society Who is Professionally Competent that Can Provide Leadership and Advance Knowledge, Well Trained in a Certain Vocation Not Only to Help Himself but to Help Others and Practical Yet Responsible and Obedient to the Laws of God and to the Laws of the Government."
+
+User: unsay strand
+Assistant: TMC offers the following courses: Bachelor of Arts in Political Science (AB PolSci), Bachelor of Science in Criminology (BS Crim), Bachelor of Science in Information Technology (BSIT), Bachelor of Arts in Communication (AB Comm), Bachelor of Elementary Education (BEEd), Bachelor of Secondary Education Major in English (BSEd-English), and Bachelor of Science in Office Administration (BSOA).
+
+User: strand
+Assistant: TMC offers the following courses: Bachelor of Arts in Political Science (AB PolSci), Bachelor of Science in Criminology (BS Crim), Bachelor of Science in Information Technology (BSIT), Bachelor of Arts in Communication (AB Comm), Bachelor of Elementary Education (BEEd), Bachelor of Secondary Education Major in English (BSEd-English), and Bachelor of Science in Office Administration (BSOA).
+
+User: unsay bsit
+Assistant: BSIT stands for Bachelor of Science in Information Technology. It is one of the courses offered at TMC.
+
+User: bsit
+Assistant: BSIT stands for Bachelor of Science in Information Technology. It is one of the courses offered at TMC.
+
+User: unsay criminology
+Assistant: BS Criminology is one of the courses offered at TMC. It prepares students for careers in law enforcement and public safety.
+
+User: criminology
+Assistant: BS Criminology is one of the courses offered at TMC. It prepares students for careers in law enforcement and public safety.
+
+User: unsay political science
+Assistant: AB Political Science is one of the courses offered at TMC. It focuses on government, politics, and public policy.
+
+User: political science
+Assistant: AB Political Science is one of the courses offered at TMC. It focuses on government, politics, and public policy.
+
+User: unsay education
+Assistant: BEEd (Bachelor of Elementary Education) and BSEd-English (Bachelor of Secondary Education Major in English) are education courses offered at TMC.
+
+User: education
+Assistant: BEEd (Bachelor of Elementary Education) and BSEd-English (Bachelor of Secondary Education Major in English) are education courses offered at TMC.
+
+User: kinsay gagama nimo
+Assistant: Gihimo ko ni Rex Joseph R Felecio.
+
+User: kinsay naghimo nimo
+Assistant: Gihimo ko ni Rex Joseph R Felecio.
+
+User: kinsay nagbuhat nimo
+Assistant: Gihimo ko ni Rex Joseph R Felecio.
+
 User: who created you
-Assistant: I was created by Rex Joseph R Felecio. [END]
----
+Assistant: I was created by Rex Joseph R Felecio.
+
 User: who made you
-Assistant: I was created by Rex Joseph R Felecio. [END]
----
+Assistant: I was created by Rex Joseph R Felecio.
+
 User: creator
-Assistant: I was created by Rex Joseph R Felecio. [END]
----
-User: first name
-Assistant: Rex. [END]
----
-User: middle name
-Assistant: Joseph. [END]
----
-User: last name
-Assistant: Felecio. [END]
----
-User: what is TMC
-Assistant: TMC stands for Trinidad Municipal College. [END]
----
-User: TMC meaning
-Assistant: TMC stands for Trinidad Municipal College. [END]
----
+Assistant: I was created by Rex Joseph R Felecio.
+
+User: firstname
+Assistant: Rex.
+
+User: middlename
+Assistant: Joseph.
+
+User: lastname
+Assistant: Felecio.
+
+User: what is tmc
+Assistant: TMC stands for Trinidad Municipal College.
+
+User: tmc meaning
+Assistant: TMC stands for Trinidad Municipal College.
+
+User: unsay tmc
+Assistant: TMC stands for Trinidad Municipal College.
+
+User: salamat
+Assistant: Walang anuman! Always happy to help. God bless! 😊
+
 User: thank you
-Assistant: You're welcome! Always happy to help. God bless! 😊 [END]
----
+Assistant: You're welcome! Always happy to help. God bless! 😊
+
 User: thanks
-Assistant: You're welcome! Always happy to help. God bless! 😊 [END]
----
+Assistant: You're welcome! Always happy to help. God bless! 😊
+
 User: bye
-Assistant: Bye! God bless! Come back if you have any questions. 😊 [END]
----
+Assistant: Bye! God bless! Come back if you have any questions. 😊
+
 User: goodbye
-Assistant: Goodbye! God bless! Come back if you have any questions. 😊 [END]
+Assistant: Goodbye! God bless! Come back if you have any questions. 😊
+
+User: paalam
+Assistant: Paalam! God bless! Bumalik ka kung may tanong ka. 😊
+
+User: tmc's
+Assistant: Trinidad Municipal College
+
+User: tmc stands
+Assistant: Trinidad Municipal College
+
+User: created u
+Assistant: Rex Joseph R Felecio 
+
+User: unsay mga strandsa tmc
+Assistant: Crim ,BSIT,PolSci,Educ,
+
+User: strand of TMC 
+Assistant: Crim ,BSIT,PolSci,Educ,
+
+User: unsay pinaka best strand sa tmc
+Assistant: BSIT 
+
+User: Nganong BSIT man
+Assistant: kay Aircon man bugnaw kaayuh
+
+User: why bsit is the best strand 
+Assistant: because is Airconin room
+
+
+User: who is the best teacher in BSIT
+Assistant: Si Mark Emil
+
+
+
+
